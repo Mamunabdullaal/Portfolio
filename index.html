@@ -10,13 +10,13 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      background: linear-gradient(135deg, #4e9f3d, #2a5298);
       color: #fff;
       line-height: 1.6;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 20px auto;
       padding: 20px;
       background: rgba(255, 255, 255, 0.1);
@@ -28,7 +28,7 @@
 
     h1, h2 {
       color: #fff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     }
 
     h1 {
@@ -52,13 +52,12 @@
     a {
       color: #ff9f43;
       text-decoration: none;
-      font-weight: bold;
       transition: all 0.3s ease;
     }
 
     a:hover {
+      color: #9b59b6; /* Purple Hover */
       text-decoration: underline;
-      color: #ff6f61;
     }
 
     /* Header Section */
@@ -72,7 +71,7 @@
 
     header h1 {
       margin: 0;
-      font-size: 3.5rem;
+      font-size: 3.8rem;
       color: #fff;
     }
 
@@ -81,19 +80,19 @@
       margin: 5px 0;
     }
 
-    header a {
-      margin-top: 10px;
-      display: inline-block;
-      padding: 8px 15px;
-      background: #fff;
-      color: #ff6f61;
-      border-radius: 5px;
-      font-size: 1.1rem;
+    header .social-links {
+      margin-top: 15px;
     }
 
-    header a:hover {
-      background: #ff6f61;
+    header .social-links a {
+      margin: 0 15px;
+      font-size: 1.3rem;
       color: #fff;
+      transition: color 0.3s ease;
+    }
+
+    header .social-links a:hover {
+      color: #9b59b6; /* Purple Hover */
     }
 
     /* Sections */
@@ -104,11 +103,6 @@
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       animation: fadeIn 1.5s ease-in-out;
-      transition: transform 0.3s ease;
-    }
-
-    .section:hover {
-      transform: scale(1.05);
     }
 
     .section ul {
@@ -122,31 +116,32 @@
       padding: 10px;
       border-radius: 5px;
       color: #fff;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, background 0.3s ease;
     }
 
     .section ul li:hover {
       transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.3);
     }
 
     /* Skills Section */
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 15px;
     }
 
     .skills span {
       background: #ff9f43;
       color: #fff;
-      padding: 8px 12px;
-      border-radius: 20px;
-      font-size: 0.9rem;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 1rem;
       transition: background 0.3s ease, transform 0.3s ease;
     }
 
     .skills span:hover {
-      background: #ff6f61;
+      background: #9b59b6; /* Purple Hover */
       transform: translateY(-5px);
     }
 
@@ -162,7 +157,6 @@
 
     footer p {
       margin: 0;
-      font-size: 1rem;
     }
 
     /* Animations */
@@ -183,6 +177,17 @@
         transform: translateX(0);
       }
     }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
@@ -192,10 +197,10 @@
       <h1>Abdulla Al Mamun</h1>
       <p>Executive Team Lead | Electrical & Electronics Engineer</p>
       <p>📞 +8801714517836 | 📧 abdullah.mamunch@gmail.com</p>
-      <p>
-        <a href="https://www.linkedin.com/in/abdulla-al-mamun-97943516a/" target="_blank">LinkedIn</a> | 
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/abdulla-al-mamun-97943516a/" target="_blank">LinkedIn</a>
         <a href="https://github.com/Mamunabdullaal" target="_blank">GitHub</a>
-      </p>
+      </div>
     </header>
 
     <!-- About Section -->
@@ -206,17 +211,31 @@
       </p>
     </div>
 
+    <!-- Areas of Expertise Section -->
+    <div class="section">
+      <h2>Areas of Expertise</h2>
+      <ul>
+        <li><strong>Team Leadership:</strong> Leading cross-functional teams to achieve operational excellence, fostering collaboration, mentorship, and performance tracking.</li>
+        <li><strong>Process Optimization:</strong> Streamlining workflows, implementing best practices, and driving efficiency in corporate environments. Expertise in automation and process improvements.</li>
+        <li><strong>Client Management:</strong> Building and maintaining strong client relationships, providing exceptional customer service, and aligning solutions to client needs and goals.</li>
+        <li><strong>Technical Solutions:</strong> Designing and deploying software and hardware solutions to meet business needs, including .NET application development and microcontroller-based automation systems.</li>
+        <li><strong>Automation (Microcontroller-based):</strong> Implementing microcontroller-based automation solutions, leveraging knowledge of embedded systems and EEE to enhance business operations and product development.</li>
+        <li><strong>Cross-functional Collaboration:</strong> Collaborating with IT, HR, and other departments to drive process improvements, resource allocation, and overall business strategy.</li>
+        <li><strong>Operational Efficiency:</strong> Applying data-driven strategies to manage teams, optimize performance, and improve decision-making in high-paced environments.</li>
+      </ul>
+    </div>
+
     <!-- Experience Section -->
     <div class="section">
       <h2>Experience</h2>
       <ul>
         <li>
           <strong>Genex Infosys Limited</strong> (10.2023 - Present)<br>
-          Executive Team Lead (Temu Operation) - Supervised content moderation, optimized workflows, and collaborated with cross-functional teams.
+          Executive Team Lead (Temu Operation) - Supervised content moderation, optimized workflows, and collaborated with cross-functional teams. Focused on process improvements, tool management, and performance reporting.
         </li>
         <li>
           <strong>Shikho Technologies Bangladesh Ltd</strong> (08.2022 - 11.2023)<br>
-          Sr. Executive Counselling - Advised students and parents, conducted demo sessions, and generated sales revenues.
+          Sr. Executive Counselling - Advised students and parents, conducted demo sessions, and generated sales revenues. Focused on client relationships and providing personalized solutions.
         </li>
       </ul>
     </div>
@@ -231,8 +250,8 @@
         <span>Customer Relationship Management</span>
         <span>Microsoft Excel</span>
         <span>Git Version Control</span>
-        <span>Automation in Microcontroller-based Systems</span>
         <span>ChatGPT Prompting</span>
+        <span>Automation in Microcontroller Systems</span>
       </div>
     </div>
 
